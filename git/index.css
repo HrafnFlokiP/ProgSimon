@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Tirra:wght@400;500;600;700;800;900&display=swap');
+
+body{
+    font-family: "Robot";
+    margin: 0;
+    padding: 0;
+}
+.page{
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    /* grid layout */
+    display: grid;
+    place-items: center;
+    /* postition fixed - class "show" viser pages*/
+    position: fixed;
+    left: -100vw;
+    transition: 1s ease-in-out;
+}
+.show {
+    left: 0;
+}
+
+/* all divs inside pages, are treatet as full width grids*/
+.page div {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+}
+
+h1{
+    font-weight: 300;
+    font-size: 3rem;
+}
+
+#page2{
+    grid-template-rows: 1fr 3fr;
+}
+
+
+#page2 .top{
+    background-color: lightgray;
+    
+}
+
+#page2 .bottom{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    /*border: dotted 20px;*/
+    background-image: url(./assets/picture.jpg);
+    
+    background-size: cover;
+}
+#page3{
+    grid-template-columns: 1fr 1fr;
+}
+#page3 .left{
+    grid-template-rows: 1fr 3fr;
+    background-color: rgb(244, 249, 249);
+
+}
+
+#page3 .left .bottom{
+    background-color: black;
+    color: white;
+}
+
+#page3 .right .box{
+    height: 50%;
+    width: 50%;
+
+}
+
+#page3 .right{
+    background-color: rgb(43, 255, 0);
+}
+
+#page3 .right .bottom{
+    background-color: white;
+    color: black;
+}
+
+
+#page4 {
+    grid-template-rows: repeat(4, 1fr);
+}
+
+#page4 .col:nth-child(1){
+    background-color: lightskyblue;
+}
+
+#page4 .col:nth-child(2){
+    background-color: rgb(4, 11, 16);
+}
+
+#page4 .col:nth-child(3){
+    background-color: rgb(250, 135, 135);
+}
+
+#page4 .col:nth-child(4){
+    background-color: rgb(250, 135, 244);
+}
+
+.navigation{
+    text-align: center;
+    background-color: rgb(33, 9, 247);
+}
