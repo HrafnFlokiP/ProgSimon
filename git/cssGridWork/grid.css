@@ -1,0 +1,191 @@
+body{
+    font-family: "Robot";
+    margin: 0;
+    padding: 0;
+}
+.page{
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    /* grid layout */
+    display: grid;
+    place-items: center;
+    /* postition fixed - class "show" viser pages*/
+    position: fixed;
+    left: -100vw;
+    transition: 1s ease-in-out;
+}
+.show {
+    left: 0;
+}
+
+/* all divs inside pages, are treatet as full width grids*/
+.page div {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+}
+div .box{
+    height: 70%;
+    width: 70%;
+}
+
+
+h1{
+    font-weight: 300;
+    font-size: 3rem;
+}
+
+#page1 {
+    grid-template-columns: 1fr 1fr;
+}
+#page1 .right {
+    grid-template-rows: 1fr 1fr;
+}
+#page1 .right .top{
+    background-color: aqua;
+}
+#page1 .right .bottom{
+    background-color: bisque;
+}
+#page1 .left{
+    background-color: beige;
+}
+
+#page2 {
+    grid-template-columns: 1fr 1fr;      
+}
+#page2 .left .bottom  {
+    background-color: rgb(250, 215, 215);
+}
+#page2 .right .bottom {
+    background-color: brown;
+}
+#page2 .left .top {
+    background-color: antiquewhite;
+}
+#page2 .right .top {
+    background-color: blue;
+}
+
+
+#page3{
+    grid-template-columns: 1fr 1fr;
+}
+
+#page4{
+    grid-template-columns: 3fr 1fr;
+}
+#page4 .right{
+    grid-template-rows:5,repeat(1fr);
+}
+
+#page5 {
+    grid-template-rows: 1fr 1fr;
+}
+#page5 .bottom {
+    grid-template-columns: 1fr 1fr;
+}
+
+#page6{
+    grid-template-columns: 1fr 1fr;
+}
+#page6 .left{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, 1fr);
+}
+
+#page7{
+    grid-template-rows: 1fr 2fr;
+}
+
+#page7 .top div{
+    grid-template-rows: 1fr 1fr;
+}
+#page7 .bottom{
+    grid-template-columns: 1fr 1fr;
+}
+#page7 .bottom .right{
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+#page8 {
+    grid-template-rows: 1fr 1fr;
+}
+#page8 .top {
+    grid-template-columns: 1fr 1fr;
+}
+
+#page9{
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+/*-------------------------------------------------------------hover burger code-----------------------------------------------------------*/
+body{
+    margin: 0;
+    font-family: Arial;
+    box-sizing: border-box;
+}
+
+.menu-wrapper {
+    position: fixed;
+    width: fit-content;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 2;
+}
+
+.burger-icon{
+    position: fixed;
+    left: 1rem;
+    top: 1rem;
+    cursor: pointer;
+    font-size: 3rem;
+    color: black;
+    z-index: 3;
+    transition: color 0.3s ease-in-out;
+}
+
+.menu-wrapper:has(.sidebar:hover) .burger-icon, .burger-icon:hover {
+    color: white;
+}
+
+.sidebar {
+    position: relative;
+    left: -100%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    min-width: 15rem;
+    background-color: black;
+    color: white;
+    padding: 4rem 1rem;
+    box-sizing: border-box;
+    transition: left 0.3s ease-in-out;
+}
+
+.burger-icon:hover + .sidebar,.sidebar:hover {
+    left: 0%;
+    box-shadow: 0 0 30px 5px black;
+    
+}
+
+.sidebar a {
+    font-size: 1.5rem;
+    display: block;
+    text-decoration: none;
+    color: white;
+    margin: 1rem 0;
+    opacity: 0.5;
+    transition: opacity 0.15s ease-in-out, 
+        transform 0.15s ease-in-out;
+}
+
+.sidebar a:hover {
+    opacity: 1;
+    transform: translateX(0.3rem);
+}
