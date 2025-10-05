@@ -105,7 +105,22 @@ h1{
     background-color: rgb(250, 135, 244);
 }
 
+#page5 {
+    grid-template-columns: 1fr 1fr;
+}
+#page5 .right{
+    grid-template-rows: 1fr 1fr;
+}
+#page5 .right .top {
+    background-color: aqua;
+}
+#page5 .right .bottom {
+    background-color: blue;
+    color: red;
+}
+
 .navigation{
     text-align: center;
     background-color: rgb(33, 9, 247);
 }
+

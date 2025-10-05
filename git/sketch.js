@@ -1,4 +1,4 @@
-const totalPages = 4;
+const totalPages = 5;
 let currentPage = 1;
 
 function goToPage(pageNumber) {
