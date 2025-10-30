@@ -68,7 +68,7 @@ body{
 }
 /*-----------------------sidebar-----------------------------*/
 .page{
-    text-align: center;
+    
     width: 100vw;
     height: 100vh;
     overflow: hidden;
@@ -95,6 +95,13 @@ body{
     margin-bottom: 0;
     margin-top: 0;
     text-align: center;
+}
+
+
+.rammi {
+    border: 1px solid black;
+    margin: .4em;
+    padding: .4em;
 }
 
 
@@ -161,9 +168,7 @@ body{
 #slideset2 > * {position: absolute; top: 110%; text-align: center;
   animation: 12s autoplay2 infinite ease-in-out}
 
-.pause2 {
-  display: none;
-}
+
 @keyframes autoplay2 {
   0% {top: 100%}
   4% {top: 0%}
