@@ -1,0 +1,226 @@
+/*------------------------------This is the sidebar hover css code open-------------------------------*/
+body{
+    margin: 0;
+    font-family: Arial;
+    box-sizing: border-box;
+}
+
+.menu-wrapper {
+    position: fixed;
+    width: fit-content;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 2;
+}
+
+.burger-icon{
+    position: fixed;
+    left: 1rem;
+    top: 1rem;
+    cursor: pointer;
+    font-size: 3rem;
+    color: black;
+    z-index: 3;
+    transition: color 0.3s ease-in-out;
+
+}
+
+.menu-wrapper:has(.sidebar:hover) .burger-icon, .burger-icon:hover {
+    color: white;
+}
+
+.sidebar {
+    position: relative;
+    left: -100%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    min-width: 15rem;
+    background-color: black;
+    color: white;
+    padding: 4rem 1rem;
+    box-sizing: border-box;
+    transition: left 0.3s ease-in-out;
+}
+
+.burger-icon:hover + .sidebar,.sidebar:hover {
+    left: 0%;
+    box-shadow: 0 0 30px 5px black;
+    
+}
+
+.sidebar a {
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: block;
+    text-decoration: none;
+    color: white;
+    margin: 1rem 0;
+    opacity: 0.5;
+    transition: opacity 0.15s ease-in-out, 
+        transform 0.15s ease-in-out;
+}
+
+.sidebar a:hover {
+    opacity: 1;
+    transform: translateX(0.3rem);
+}
+/*-----------------------------------side bar hover code close---------------------------------*/
+
+/*-----------------------------------index.html open------------------------------------------*/
+body {
+    margin: 0px;
+    padding: 0px;
+}
+.backround{
+    background-image: url(./assets/icelandpic.jpg);
+    background-size: cover;
+}
+.imge {
+    border:solid 3px black;
+}
+.text {
+    text-align: center;
+    padding-bottom: .5em;
+}
+.topName {
+    padding-bottom: .5em;
+    padding-top: .5em;
+    margin-bottom: 0;
+    margin-top: 0;
+    text-align: center;
+}
+.imageIs {
+    width:100%;
+    padding-top: 1em;
+}
+.rammi div {
+    border: 1px solid black;
+    font-family: 'Caprasimo', serif;
+    display: flex;
+    justify-content: space-around;
+    margin: .7em;
+    padding: .5em;
+}
+.colShow {
+    padding: 0em;
+    text-align: center;
+}
+.colShowTop {
+    text-align: center;
+
+}
+.footer{
+    margin-bottom: 0;
+    padding: 1em;
+    text-align: center;
+   
+}
+
+/*er ekki að nota núna*/
+.colShowRammi{
+    border: 1px solid black;
+    margin: .3em;
+}
+/**/
+
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6 {
+    display: grid;
+}
+
+@media screen and (min-width:48rem) {
+    .col-2, .col-4, .col-6 {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        row-gap: 1rem;
+    }
+    .landing {
+        margin: 0 auto;
+        grid-template-columns: 1.5fr 1fr;
+        text-align: center;
+        align-items: center;
+        
+        
+        
+    }
+}
+
+@media screen and (min-width:60rem){
+    .col-3 {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1rem;
+        row-gap: 1rem;
+    }
+    .col-4 {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 1rem;
+        row-gap: 1rem;
+    }
+
+    .col-5 {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 1rem;
+        row-gap: 1rem;
+    }
+
+    .col-6 {
+        grid-template-columns: repeat(6, 1fr);
+    }
+    
+ 
+}
+/*-----------------------------------index.html close------------------------------------------*/
+
+/*-----------------------------------pages code open------------------------------------------------*/
+.page{
+    overflow: hidden;
+    /* grid layout */
+    display: grid;
+    left: -100vw;
+    transition: 1s ease-in-out;
+}
+.show {
+    left: 0;
+}
+
+/* all divs inside pages, are treatet as full width grids*/
+.page div {
+    width: 100%;
+    height: 100%;
+    display: grid;
+
+}
+/*-----------------------------------pages code close------------------------------------------------*/
+
+
+/*-------------------------------------------slider open-----------------------------------------*/
+
+.slide {
+    
+    width: 100%; 
+    height: 30px;
+    text-align: center;
+    vertical-align: center;
+}
+
+#slideset2 {height: 5em; width: 100%; position: relative;
+  overflow: hidden;}
+#slideset2 > * {position: absolute; top: 110%; text-align: center;
+  animation: 12s autoplay2 infinite ease-in-out}
+
+.pause2 {
+  display: none;
+}
+@keyframes autoplay2 {
+  0% {top: 100%}
+  4% {top: 0%}
+  33.33% {top: 0%}
+  37.33% {top: -100%}
+  100% {top: -100%}
+}
+#slideset2 > *:nth-child(1) {animation-delay: 0s}
+#slideset2 > *:nth-child(2) {animation-delay: 4s}
+#slideset2 > *:nth-child(3) {animation-delay: 8s}
+
+/*-------------------------------------------slider close-----------------------------------------*/

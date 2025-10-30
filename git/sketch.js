@@ -13,3 +13,8 @@ function goToPage(pageNumber) {
     console.log("Current Page", currentPage);
     return currentPage
 }
+
+//p5 setup gets called one time before the site shows
+function setup(){
+    console.log('p5 setup called')
+}
